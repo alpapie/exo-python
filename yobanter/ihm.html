@@ -1,0 +1,53 @@
+
+<form action="#" method="POST" id="connexion" class="col-md-4">
+               
+
+                <fieldset class="col-md-12 col-sm-10 ">
+                    <legend>Colis</legend>
+                    
+                   
+                    <div class="form-group">
+                        <label for="idt">Nature</label>
+                        <input type="email" class="form-control" name="email" id="idt">
+                        
+                    </div>
+                    <div class="form-group">
+                        <label for="pd">Point de depart</label>
+                        <input type="text" class="form-control" name="pwd" id="pd">
+                        
+                    </div>
+                    <div class="form-group">
+                        <label for="pa">Point de destination</label>
+                        <input type="text" class="form-control" name="pwd" id="pa">
+                        
+                    </div>
+                     <div class="form-group">
+                        <label for="pa">Poids/Quantite</label>
+                        <input type="text" class="form-control" name="pwd" id="pa">
+                        
+                    </div>
+
+                </div>
+                <div class="form-group">
+                   <label for="pa">prix</label>
+                   <button id="prix"></button>
+                   
+               </div>
+                    <button class="btn btn-outline-dark">Envoyer</button><br><br>
+                    
+                </fieldset>
+            </form><br>
+            <script>
+                document.getElementById('pa').onmousedown=function(){
+                    let poids=document.getElementById('pa').value;
+                   console.log(poids)
+                   if(poids!=NaN || poids!=0 || poids!=""){
+                       let prix=Math.random()*10000;
+                       prix=prix.toFixed(2);
+                       document.getElementById('prix').innerHTML=prix;
+                  }
+               };
+
+
+               
+            </script>
